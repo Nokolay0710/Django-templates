@@ -74,7 +74,7 @@
 
 8. Context add.html
 
-````html
+```html
 {% extends 'base.html' %}
 
 {% load static %}
