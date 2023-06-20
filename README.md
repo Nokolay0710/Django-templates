@@ -117,7 +117,44 @@ TEMPLATES = [
         },
     },
 ]
-````
+```
+10. config -> urls.py:
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('newapp.urls')), # new
+]
+```
+11. Create to dir newapp file urls.py:
+
+```python
+from .views import index, list, add
+from django.urls import re_path
+
+urlpatterns = [
+    re_path(r'^$', index, name='index'),
+    re_path(r'^list/$', list, name='list'),
+    re_path(r'^add/$', add, name='add'),
+]
+```
+12. newapp -> views.py:
+
+```python
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'index.html')
+
+def list(request):
+    return render(request, 'list.html')
+
+def add(request):
+    return render(request, 'add.html')
+```
 
 
-str(BASE_DIR.joinpath('templates'))
+
