@@ -2,7 +2,7 @@
 2. py manage.py startapp newapp
 3. cd newapp && mkdir templates
 4. create files: base.html, index.html, list.html, add.html
-5 Context base.html:
+5. Context base.html:
 
 ```html
 <!-- templates/newapp/base.html -->
@@ -43,7 +43,7 @@
 ```
 
 6. Context index.html
-
+```html
 {% extends 'base.html' %}
 
 {% load static %}
@@ -54,9 +54,10 @@
   <h1>Indexpage</h1>
   <p>Indexpage content.</p>
 {% endblock content %}
+```
 
 7. Context list.html
-
+```html
 {% extends 'base.html' %}
 
 {% load static %}
@@ -67,9 +68,11 @@
   <h1>Listpage</h1>
   <p>List content.</p>
 {% endblock content %}
+```
 
 8. Context add.html
 
+````html
 {% extends 'base.html' %}
 
 {% load static %}
@@ -80,6 +83,7 @@
   <h1>Addpage</h1>
   <p>Addpage create content.</p>
 {% endblock content %}
+```
 
 9. 
 
