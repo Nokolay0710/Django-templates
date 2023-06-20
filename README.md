@@ -156,5 +156,6 @@ def add(request):
     return render(request, 'add.html')
 ```
 
-
+13. py manage.py runserver
+14. Starting development server at http://127.0.0.1:8000/ (page index.html)
 
