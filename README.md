@@ -1,4 +1,4 @@
-1. https://github.com/Nokolay0710/Django_quick_start
+1. [Django_quick_start](https://github.com/Nokolay0710/Django_quick_start)
 2. py manage.py startapp newapp
 3. cd newapp && mkdir templates && cd templates
 4. create files: base.html, index.html, list.html, add.html
