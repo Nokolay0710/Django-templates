@@ -1,0 +1,1 @@
+str(BASE_DIR.joinpath('templates'))
