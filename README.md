@@ -2,7 +2,7 @@
 2. py manage.py startapp newapp
 3. cd newapp && mkdir templates && cd templates
 4. create files: base.html, index.html, list.html, add.html
-5. Context base.html:
+5. Code to page base.html:
 
 ```html
 <!-- templates/newapp/base.html -->
@@ -42,7 +42,7 @@
 </html>
 ```
 
-6. Context index.html
+6. Code to page index.html
    
 ```html
 {% extends 'base.html' %}
@@ -57,7 +57,7 @@
 {% endblock content %}
 ```
 
-7. Context list.html
+7. Code to page list.html
    
 ```html
 {% extends 'base.html' %}
@@ -72,7 +72,7 @@
 {% endblock content %}
 ```
 
-8. Context add.html
+8. Code to page add.html
 
 ```html
 {% extends 'base.html' %}
@@ -129,7 +129,7 @@ urlpatterns = [
     path('', include('newapp.urls')), # new
 ]
 ```
-11. Create to dir newapp file urls.py:
+11. Create to newapp dir file urls.py:
 
 ```python
 from .views import index, list, add
