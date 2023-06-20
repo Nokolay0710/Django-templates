@@ -3,6 +3,7 @@
 3. cd newapp && mkdir templates
 4. create files: base.html, index.html, list.html, add.html
 5 Context base.html:
+
 ```html
 <!-- templates/newapp/base.html -->
 {% load static %}
@@ -40,6 +41,7 @@
 </body>
 </html>
 ```
+
 6. Context index.html
 
 {% extends 'base.html' %}
