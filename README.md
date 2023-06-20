@@ -43,6 +43,7 @@
 ```
 
 6. Context index.html
+   
 ```html
 {% extends 'base.html' %}
 
@@ -57,6 +58,7 @@
 ```
 
 7. Context list.html
+   
 ```html
 {% extends 'base.html' %}
 
@@ -86,6 +88,7 @@
 ```
 
 9. config -> settings.py:
+
 ```python
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -115,5 +118,6 @@ TEMPLATES = [
     },
 ]
 ````
+
 
 str(BASE_DIR.joinpath('templates'))
