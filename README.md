@@ -1,8 +1,10 @@
 1. [Django_quick_start](https://github.com/Nokolay0710/Django_quick_start)
-2. py manage.py startapp newapp
-3. cd newapp && mkdir templates && cd templates
-4. create files: base.html, index.html, list.html, add.html
-5. Code to page base.html:
+2. ```python
+   py manage.py startapp newapp
+   ```
+5. cd newapp && mkdir templates && cd templates
+6. create files: base.html, index.html, list.html, add.html
+7. Code to page base.html:
 
 ```html
 <!-- templates/newapp/base.html -->
@@ -42,7 +44,7 @@
 </html>
 ```
 
-6. Code to page index.html
+8. Code to page index.html
    
 ```html
 {% extends 'base.html' %}
@@ -57,7 +59,7 @@
 {% endblock content %}
 ```
 
-7. Code to page list.html
+9. Code to page list.html
    
 ```html
 {% extends 'base.html' %}
@@ -72,7 +74,7 @@
 {% endblock content %}
 ```
 
-8. Code to page add.html
+10. Code to page add.html
 
 ```html
 {% extends 'base.html' %}
@@ -87,7 +89,7 @@
 {% endblock content %}
 ```
 
-9. config -> settings.py:
+11. config -> settings.py:
 
 ```python
 INSTALLED_APPS = [
@@ -118,7 +120,7 @@ TEMPLATES = [
     },
 ]
 ```
-10. config -> urls.py:
+12. config -> urls.py:
 
 ```python
 from django.contrib import admin
@@ -129,7 +131,7 @@ urlpatterns = [
     path('', include('newapp.urls')), # new
 ]
 ```
-11. Create to newapp dir file urls.py:
+13. Create to newapp dir file urls.py:
 
 ```python
 from .views import index, list, add
@@ -141,7 +143,7 @@ urlpatterns = [
     re_path(r'^add/$', add, name='add'),
 ]
 ```
-12. newapp -> views.py:
+14. newapp -> views.py:
 
 ```python
 from django.shortcuts import render
@@ -156,5 +158,7 @@ def add(request):
     return render(request, 'add.html')
 ```
 
-13. py manage.py runserver
-14. Starting development server at http://127.0.0.1:8000/ (page index.html)
+15. ```python
+    py manage.py runserver
+    ```
+16. Starting development server at http://127.0.0.1:8000/ (page index.html)
